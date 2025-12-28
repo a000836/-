@@ -179,14 +179,6 @@ export const BookingForm: React.FC<BookingFormProps> = ({ existingBookings, onSu
           </div>
         </div>
 
-        {/* Global Validation Error Banner */}
-        {validationError && (
-          <div className="bg-red-50 border-b border-red-100 px-8 py-4 flex items-center gap-3 text-red-700 animate-fade-in">
-            <AlertCircle size={20} className="shrink-0" />
-            <p className="font-bold">{validationError}</p>
-          </div>
-        )}
-
         <form onSubmit={handleSubmit} className="p-8 space-y-8">
           
           {/* 1. Basic Information */}
@@ -409,21 +401,31 @@ export const BookingForm: React.FC<BookingFormProps> = ({ existingBookings, onSu
             </div>
           </div>
 
-          <div className="pt-6 flex gap-4 border-t border-slate-100 mt-4">
-            <button
-              type="button"
-              onClick={onCancel}
-              className="flex-1 py-3 px-6 rounded-xl border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors"
-            >
-              取消
-            </button>
-            <button
-              type="submit"
-              disabled={!!validationError || !!batteryError}
-              className="flex-1 py-3 px-6 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 shadow-lg shadow-slate-900/20 transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              確認登記 ({selectedSlots.length} 筆)
-            </button>
+          <div className="pt-6 border-t border-slate-100 mt-4 space-y-4">
+            <div className="flex gap-4">
+              <button
+                type="button"
+                onClick={onCancel}
+                className="flex-1 py-3 px-6 rounded-xl border border-slate-200 text-slate-600 font-medium hover:bg-slate-50 transition-colors"
+              >
+                取消
+              </button>
+              <button
+                type="submit"
+                disabled={!!validationError || !!batteryError}
+                className="flex-1 py-3 px-6 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 shadow-lg shadow-slate-900/20 transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                確認登記 ({selectedSlots.length} 筆)
+              </button>
+            </div>
+            
+            {/* Validation Error moved here */}
+            {validationError && (
+              <div className="bg-red-50 border border-red-100 rounded-xl px-4 py-3 flex items-start gap-3 text-red-700 animate-fade-in shadow-sm">
+                <AlertCircle size={20} className="shrink-0 mt-0.5" />
+                <p className="font-bold text-sm leading-relaxed">{validationError}</p>
+              </div>
+            )}
           </div>
         </form>
       </div>

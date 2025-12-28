@@ -16,8 +16,8 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate }) => {
               <Plane size={24} />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900 tracking-tight">SkyGuard</h1>
-              <p className="text-xs text-slate-500 font-medium">無人機資源管理中心</p>
+              <h1 className="text-xl font-bold text-slate-900 tracking-tight">高雄市政府消防局</h1>
+              <p className="text-xs text-slate-500 font-medium">災害搶救科</p>
             </div>
           </div>
           

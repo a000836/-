@@ -81,8 +81,7 @@ const App: React.FC = () => {
           <div className="space-y-6 animate-fade-in">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
                <div>
-                  <h2 className="text-2xl font-bold text-slate-800 tracking-tight">儀表板</h2>
-                  <p className="text-slate-500">查看所有設備的預約狀態</p>
+                  <h2 className="text-2xl font-bold text-slate-800 tracking-tight">無人機考訓借用登記</h2>
                </div>
                <div className="text-sm text-slate-500 bg-white px-4 py-2 rounded-lg border border-slate-200 shadow-sm">
                  目前共有 <span className="font-bold text-slate-900">{bookings.length}</span> 筆預約

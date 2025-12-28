@@ -1,5 +1,5 @@
 {
-  "name": "無人機借用登記表單",
+  "name": "無人機考訓借用登記",
   "description": "An interactive drone reservation system featuring a real-time calendar dashboard, color-coded equipment tracking, and instant booking management for drone fleets.",
   "requestFramePermissions": []
 }
